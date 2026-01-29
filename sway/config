@@ -22,6 +22,12 @@ set $menu wmenu-run \
 	-f "Source Code Pro 10.5"
 
 
+#Dark theme pavucontrol
+### Variables GTK
+#exec_always dbus-update-activation-environment --systemd \
+#    GTK_THEME=Adwaita:dark \
+#    XDG_CURRENT_DESKTOP=sway
+
 
 #NO_AT_BRIDGE=1 firefox
 
@@ -84,6 +90,12 @@ input * {
 	
 ###########################
 	#Mes modifications
+
+	# right Ctrl to switch
+#	input type:keyboard {
+#    	xkb_layout us,ch
+#    	xkb_options grp:rctrl_toggle
+#	}
 
 	#Lumiere bleu / capture d'ecran / playerctl
 	bindsym	$mod+F5 exec ~/.local/bin/wlsunset-toggle.sh 
