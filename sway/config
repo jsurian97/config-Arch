@@ -97,6 +97,13 @@ input * {
 #    	xkb_options grp:rctrl_toggle
 #	}
 
+	input "1:1:AT_Translated_Set_2_keyboard" {
+	xkb_layout us,ch
+	xkb_variant "","fr"
+	}
+
+	bindsym $mod+F7 input "1:1:AT_Translated_Set_2_keyboard" xkb_switch_layout next
+
 	#Lumiere bleu / capture d'ecran / playerctl
 	bindsym	$mod+F5 exec ~/.local/bin/wlsunset-toggle.sh 
 	bindsym $mod+p exec playerctl play-pause
