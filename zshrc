@@ -39,6 +39,9 @@ minishell() {
 minirt() {
 	cd ~/dev/github/-miniRT
 }
+cpp() {
+	cd ~/dev/github/cpp
+}
 exam() {
 	cd ~/dev/local/exam42
 }
