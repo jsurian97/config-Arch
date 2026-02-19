@@ -1,5 +1,8 @@
 cat todo
 
+autoload -Uz compinit
+compinit
+
 battery_status () {
 	cat /sys/class/power_supply/BAT0/capacity
 }
