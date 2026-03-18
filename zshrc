@@ -1,5 +1,3 @@
-cat todo
-
 autoload -Uz compinit
 compinit
 
@@ -117,4 +115,8 @@ function cd {
 
 change-scale() {
 	swaymsg output eDP-1 scale $1  
+}
+
+r-sync() {
+	rsync -avh --info=progress2 "$@"
 }
