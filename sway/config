@@ -20,7 +20,7 @@ set $term foot
 set $menu wmenu-run \
 	-N 000000 -n ffffff \
 	-S 000000 -s 33dfff \
-	-f "Source Code Pro 10.5"
+	-f "Caskaydia Mono Nerd Font 10.5"
 
 
 #Dark theme pavucontrol
@@ -35,7 +35,7 @@ set $menu wmenu-run \
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/riku.png fill
+output * bg /usr/share/backgrounds/sway/wallpaper2.jpg fill
 #
 # Example configuration:
 #
@@ -114,12 +114,13 @@ input * {
 	seat * hide_cursor 2000
 
 	#Touchpad
-	bindsym $mod+t exec swaymsg input "1267:12939:ASUE1214:00_04F3:328B_Touchpad" events disabled
-	bindsym $mod+Shift+t exec swaymsg input "1267:12939:ASUE1214:00_04F3:328B_Touchpad" events enabled
-	# Désactiver le touchpad au démarrage
-	input "1267:12939:ASUE1214:00_04F3:328B_Touchpad" {
-    	events disabled
+	input "type:touchpad" {
+	    events disabled          # touchpad désactivé au boot
+	    tap enabled              # tap avec 1 doigt (clic gauche)
+	    dwt enabled            # disable-while-typing (optionnel, peux décommenter si tu veux bloquer le touchpad en tapant)
 	}
+	# Raccourci toggle propre pour activer/désactiver
+	bindsym $mod+t input "type:touchpad" events toggle
 
 
 	#Theme sway
