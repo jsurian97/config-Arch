@@ -68,15 +68,6 @@ clavier() {
   echo $level | sudo tee /sys/class/leds/asus::kbd_backlight/brightness
 }
 
-get-networks () {
-	iwctl station wlan0 scan
-	iwctl station wlan0 get-networks
-}
-
-connect-to () {
-	iwctl station wlan0 connect $1
-}
-
 restart-audio() {
 	systemctl --user restart pipewire pipewire-pulse wireplumber
 }
@@ -102,6 +93,11 @@ jelicourci()
 	cd /srv/jellyfin/media
 }
 
+j42()
+{
+	cd ~/dev/j42
+}
+
 see-output() {
 	swaymsg -t get_outputs
 }
@@ -119,4 +115,9 @@ change-scale() {
 
 r-sync() {
 	rsync -avh --info=progress2 "$@"
+}
+
+connect-to-server()
+{
+	ssh jules@192.168.1.239
 }
