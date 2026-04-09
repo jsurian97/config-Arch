@@ -12,3 +12,13 @@ set incsearch
 "set cursorline
 "highlight CursorLine ctermbg=235
 highlight CurSearch ctermfg=darkred ctermbg=black guifg=#ffffff guibg=#000000
+"fenetre lexplore
+function! MyLexplore()
+  let l:old_size = g:netrw_winsize
+  let g:netrw_winsize = 10
+  let g:netrw_liststyle = 3
+  Lexplore
+  let g:netrw_winsize = l:old_size
+endfunction
+
+command! Lex call MyLexplore()
