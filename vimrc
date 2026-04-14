@@ -22,3 +22,8 @@ function! MyLexplore()
 endfunction
 
 command! Lex call MyLexplore()
+
+nnoremap <A-h> :vertical resize -5<CR>
+nnoremap <A-l> :vertical resize +5<CR>
+nnoremap <A-j> :resize +3<CR>
+nnoremap <A-k> :resize -3<CR>
