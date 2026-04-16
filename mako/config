@@ -1,0 +1,17 @@
+anchor=bottom-right
+width=200
+margin=20
+
+background-color=#00000044
+text-color=#bbbbbb
+border-size=0
+border-radius=6
+padding=6
+
+default-timeout=400
+max-visible=1
+group-by=none
+
+icons=0
+
+font=Sans 10
