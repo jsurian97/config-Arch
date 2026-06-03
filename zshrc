@@ -43,6 +43,9 @@ minirt() {
 cpp() {
 	cd ~/dev/github/cpp
 }
+webserv() {
+	cd ~/dev/github/webserv
+}
 exam() {
 	cd ~/dev/local/exam42
 }
